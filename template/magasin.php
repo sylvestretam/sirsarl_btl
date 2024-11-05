@@ -109,58 +109,6 @@
 
             <div class="card-body">
                 
-                <!-- <table class="table table-bordered tableordered table-stripper">
-
-                    <thead>
-                        <tr>
-                            <th> Code </th>
-                            <th> designation </th>
-                            <th> Reception </th>
-                            <th> Sortie </th>
-                            <th> Retour </th>
-                            <th> Stock </th>
-                        </tr>
-                    </thead>
-
-                    <tbody class='fts tablistprospect'>
-                        <?php
-                            foreach ($magasins as $magasin) {
-                        ?>
-                            <tr>
-                                <td> <?= $magasin->code ?> </td>
-                                <td> <?= $magasin->designation ?> </td>
-                                <td> 
-                                    <?= $r = $magasin->TotalReception() ?>
-                                    <button class="btn btn-sm btn-default" onclick="showReceptions('<?= $magasin->code ?>')">
-                                    <i class="fas fa-search"></i>
-                                    </button> 
-                                </td>
-                                <td> 
-                                    <?= $s = $magasin->TotalSortiesFT() + $magasin->TotalSortiesPV() ?>
-                                    <button class="btn btn-sm btn-default" onclick="showSorties('<?= $magasin->code ?>')">
-                                    <i class="fas fa-search"></i>
-                                    </button> 
-                                </td>
-                                <td> 
-                                    <?= $re = $magasin->TotalRetourFT() + $magasin->TotalRetourPV() ?>
-                                    <button class="btn btn-sm btn-default" onclick="showRetours('<?= $magasin->code ?>')">
-                                    <i class="fas fa-search"></i>
-                                    </button> 
-                                </td>
-                                <td> 
-                                    <?= $r - $s + $re ?>
-                                    <button class="btn btn-sm btn-default" onclick="showStock('<?= $magasin->code ?>')">
-                                        <i class="fas fa-search"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        <?php
-                            }
-                        ?>
-                    </tbody>
-
-                </table> -->
-
                 <table class="table table-bordered tableordered table-stripper">
 
                     <thead>

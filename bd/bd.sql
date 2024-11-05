@@ -361,49 +361,31 @@ CREATE TABLE BTL_ligne_commande_prospect(
 
 /***** DEDUSTATION *****/
 
-DROP TABLE IF EXISTS BTL_degustation_pv;
-CREATE TABLE BTL_degustation_pv(
+DROP TABLE IF EXISTS BTL_degustation;
+CREATE TABLE BTL_degustation(
         degustation_id     varchar(25),
         date_degustation     date,
-        valeur_total     integer,
-        observation     varchar(255),
-        enreg_by     varchar(255),
-        status     varchar(25),
-        pv     varchar(25),
-        PRIMARY KEY (degustation_id)
-);
-
-DROP TABLE IF EXISTS BTL_ligne_degustation_pv;
-CREATE TABLE BTL_ligne_degustation_pv(
         quantite     integer,
-        valeur     integer,
-        degustation_id     varchar(25),
-        article     varchar(25),
-        unite     varchar(25),
-        PRIMARY KEY (degustation_id,article,unite)
-);
-
-DROP TABLE IF EXISTS BTL_degustation_md;
-CREATE TABLE BTL_degustation_md(
-        degustation_id     varchar(25),
-        date_degustation     date,
         valeur_total     integer,
         observation     varchar(255),
         enreg_by     varchar(255),
         status     varchar(25),
         market_develloper     varchar(25),
+        point_de_vente     varchar(25),
         PRIMARY KEY (degustation_id)
 );
 
-DROP TABLE IF EXISTS BTL_ligne_degustation_md;
-CREATE TABLE BTL_ligne_degustation_md(
+DROP TABLE IF EXISTS BTL_ligne_degustation;
+CREATE TABLE BTL_ligne_degustation(
         quantite     integer,
         valeur     integer,
-        degustation_id     varchar(25),
+        degustation     varchar(25),
         article     varchar(25),
         unite     varchar(25),
-        PRIMARY KEY (degustation_id,article,unite)
+        PRIMARY KEY (degustation,article,unite)
 );
+
+ALTER TABLE BTL_ligne_degustation ADD CONSTRAINT FK_BTL_ligne_degustation_degustation FOREIGN KEY (degustation) REFERENCES BTL_degustation(degustation_id);
 
 /**** FIN DEGUSTATION *****/
 

@@ -93,5 +93,6 @@
 <script src="template/dist/js/retourpv.js"></script>
 <script src="template/dist/js/grh.js"></script>
 <script src="template/dist/js/venteft.js"></script>
+<script src="template/dist/js/degustation.js"></script>
 </body>
 </html>
