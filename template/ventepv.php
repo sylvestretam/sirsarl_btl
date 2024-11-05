@@ -110,7 +110,7 @@
 
             <div class="card-body">
 
-              <div class="row <?= ShowIFPermit("KONTRITOK_VPV_ADD") ?>">
+              <div class="row <?= ShowIFPermit("BTL") ?>">
                 <button type="button" class="btn btn-md btn-dark btn-flat font-weight-bold" onclick="back('.sect_list_vente','.sect_add')">
                   <i class="fas fa-plus"></i> AJOUTER
                 </button>
