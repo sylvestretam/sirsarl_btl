@@ -36,7 +36,7 @@
 
                       <div class="info-box-content">
                           <span class="info-box-text"> RECEPTION </span>
-                          <span class="info-box-number"> <?= $TotalReception ?> </span>
+                          <span class="info-box-number"> <?= number_format( $TotalReception,0) ?> </span>
 
                       <div class="progress">
                           <div class="progress-bar" style="width: 00%"></div>
@@ -54,7 +54,7 @@
 
                       <div class="info-box-content">
                           <span class="info-box-text"> SORTIE </span>
-                          <span class="info-box-number"> <?= $TotalSortie = $TotalSortieFT + $TotalSortiePV ?> </span>
+                          <span class="info-box-number"> <?=  number_format(($TotalSortie = $TotalSortieFT + $TotalSortiePV),0) ?> </span>
 
                       <div class="progress">
                           <div class="progress-bar" style="width: 00%"></div>
@@ -72,7 +72,7 @@
 
                       <div class="info-box-content">
                           <span class="info-box-text"> RETOUR </span>
-                          <span class="info-box-number"> <?= $TotalRetour = $TotalRetourFT + $TotalRetourPV ?> </span>
+                          <span class="info-box-number"> <?= number_format(($TotalRetour = $TotalRetourFT + $TotalRetourPV),0) ?> </span>
 
                       <div class="progress">
                           <div class="progress-bar" style="width: 00%"></div>
@@ -90,7 +90,7 @@
 
                       <div class="info-box-content">
                       <span class="info-box-text"> STOCK </span>
-                      <span class="info-box-number"> <?= $TotalReception - $TotalSortie + $TotalRetour ?> </span>
+                      <span class="info-box-number"> <?= number_format(($TotalReception - $TotalSortie + $TotalRetour),0) ?> </span>
 
                       <div class="progress">
                           <div class="progress-bar" style="width: 00%"></div>

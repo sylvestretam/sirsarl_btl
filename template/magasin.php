@@ -38,7 +38,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text"> RECEPTION </span>
-                            <span class="info-box-number"> <?= $TotalReception ?> </span>
+                            <span class="info-box-number"> <?= number_format( ($TotalReception),0) ?> </span>
 
                         <div class="progress">
                             <div class="progress-bar" style="width: 00%"></div>
@@ -56,7 +56,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text"> SORTIE </span>
-                            <span class="info-box-number"> <?= $TotalSortie = $TotalSortieFT + $TotalSortiePV ?> </span>
+                            <span class="info-box-number"> <?= number_format( ($TotalSortie = $TotalSortieFT + $TotalSortiePV),0) ?> </span>
 
                         <div class="progress">
                             <div class="progress-bar" style="width: 00%"></div>
@@ -74,7 +74,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text"> RETOUR </span>
-                            <span class="info-box-number"> <?= $TotalRetour = $TotalRetourFT + $TotalRetourPV ?> </span>
+                            <span class="info-box-number"> <?= number_format( ($TotalRetour = $TotalRetourFT + $TotalRetourPV),0) ?> </span>
 
                         <div class="progress">
                             <div class="progress-bar" style="width: 00%"></div>
@@ -92,7 +92,7 @@
 
                         <div class="info-box-content">
                         <span class="info-box-text"> STOCK </span>
-                        <span class="info-box-number"> <?= $TotalReception - $TotalSortie + $TotalRetour ?> </span>
+                        <span class="info-box-number"> <?= number_format( ($TotalReception - $TotalSortie + $TotalRetour),0) ?> </span>
 
                         <div class="progress">
                             <div class="progress-bar" style="width: 00%"></div>
@@ -251,9 +251,9 @@
                             <tr>
                                 <td> <?= $st->magasin ?> </td>
                                 <td> <?= $st->article ?> </td>
-                                <td> <?= $st->quantite ?> </td>
+                                <td> <?= number_format( $st->quantite,0) ?> </td>
                                 <td> <?= $st->unite ?> </td>
-                                <td> <?= $st->valeur ?> </td>
+                                <td> <?= number_format( $st->valeur,0) ?> </td>
                             </tr>
                         <?php
                             }
@@ -303,7 +303,7 @@
                                 <td> <?= $reception->date_reception ?> </td>
                                 <td> <?= $reception->magasin ?> </td>
                                 <td> 
-                                    <?= $reception->quantite ?>
+                                    <?= number_format( $reception->quantite,0) ?>
                                 </td>
                                 <td> 
                                     <button class="btn btn-sm btn-default" onclick="showReception('<?= $reception->reception_id ?>')">
