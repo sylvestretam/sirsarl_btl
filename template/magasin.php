@@ -117,19 +117,19 @@
                             <th> Unite </th>
                             <th> 
                                 Reception
-                                <button class="btn btn-sm btn-default" onclick="showReceptions('')">
+                                <button class="btn btn-sm btn-default <?= ShowIFPermit("BTL_MAG_RECEPTION") ?>" onclick="showReceptions('')">
                                     <i class="fas fa-search"></i>
                                 </button> 
                             </th>
                             <th> 
                                 Sortie 
-                                <button class="btn btn-sm btn-default" onclick="showSorties('')">
+                                <button class="btn btn-sm btn-default <?= ShowIFPermit("BTL_MAG_SORTIE") ?>" onclick="showSorties('')">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </th>
                             <th> 
                                 Retour 
-                                <button class="btn btn-sm btn-default" onclick="showRetours('')">
+                                <button class="btn btn-sm btn-default <?= ShowIFPermit("BTL_MAG_RETOUR") ?>" onclick="showRetours('')">
                                     <i class="fas fa-search"></i>
                                 </button>
                             </th>
@@ -225,7 +225,7 @@
             <div class="card-header">
                 <button class="btn btn-dark btn-sm font-weight-bold" onclick="back('.sect_list_reception','.sect_list_magasin')"> <i class="fas fa-arrow-left"></i> RETOUR </button>
             
-                <div class="card-tools">
+                <div class="card-tools <?= ShowIFPermit("BTL_MAG_RECEPTION_ADD") ?>">
                     <button class="btn btn-dark btn-sm font-weight-bold" onclick="back('.sect_list_reception','.sect_add_reception')"> <i class="fas fa-plus"></i> NOUVEAU </button>
                 </div>
             </div>
@@ -438,7 +438,7 @@
                   <div class="card card-secondary">
                     <div class="card-header">
                         <h3 class="card-title">RECEPTION</h3>
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_RECEPTION_SUP") ?>">
                             <form action='./?action=magasin&subaction=deleteReception' method='POST'>
                                 <input type="hidden" class="form-control reception_id" name="reception_id">
                                 <button class="btn btn-dark btn-sm font-weight-bold"> <i class="fas fa-minus"></i> SUPPRIMER </button>
@@ -529,7 +529,7 @@
                 <div class="card card-dark">
                     <div class="card-header">
                         <h3 class="card-title">MAGASIN <i class="fas fa-arrow-right"></i> SUPERVISEUR </h3>
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_SORTIE_ADD") ?>">
                             <button class="btn btn-secondary btn-sm font-weight-bold" onclick="back('.sect_list_sortie_ft','.sect_add_sortie_ft')"> 
                                 <i class="fas fa-plus"></i> AJOUTER 
                             </button>
@@ -853,7 +853,7 @@
 
                         <span class="lead font-weight-bold center"> MAGASIN <i class="fas fa-arrow-right"></i> SUPERVIEUR </span>
 
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_SORTIE_SUP") ?>">
                             <form action='./?action=magasin&subaction=deleteSortieFT' method='POST'>
                                 <input type="hidden" class="form-control sortie_id" name="sortie_id">
                                 <button class="btn btn-secondary btn-sm font-weight-bold"> <i class="fas fa-minus"></i> SUPPRIMER </button>
@@ -915,7 +915,7 @@
                 
                     <div class="card-header">
                         <h3 class="card-title">MAGASIN <i class="fas fa-arrow-right"></i> POINTS DE VENTE</h3>
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_SORTIE_ADD") ?>">
                             <button class="btn btn-dark btn-sm font-weight-bold" onclick="back('.sect_list_sortie_pv','.sect_add_sortie_pv')"> 
                                 <i class="fas fa-plus"></i> AJOUTER 
                             </button>
@@ -1106,7 +1106,7 @@
 
                         <span class="lead font-weight-bold center"> MAGASIN <i class="fas fa-arrow-right"></i> POINT DE VENTE</span>
 
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_SORTIE_SUP") ?>">
                             <form action='./?action=magasin&subaction=deleteSortiePV' method='POST'>
                                 <input type="hidden" class="form-control sortiepv_id" name="sortiepv_id">
                                 <button class="btn btn-dark btn-sm font-weight-bold"> <i class="fas fa-minus"></i> SUPPRIMER </button>
@@ -1183,7 +1183,7 @@
                 
                     <div class="card-header">
                         <h3 class="card-title">MAGASIN <i class="fas fa-arrow-left"></i> SUPERVISEUR </h3>
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_RETOUR_ADD") ?>">
                             <button class="btn btn-secondary btn-sm font-weight-bold" onclick="back('.sect_list_retour_ft','.sect_add_retour_ft')"> 
                                 <i class="fas fa-plus"></i> AJOUTER 
                             </button>
@@ -1375,7 +1375,7 @@
 
                         <span class="lead font-weight-bold center"> MAGASIN <i class="fas fa-arrow-right"></i> SUPERVISEUR </span>
 
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_RETOUR_SUP") ?>">
                             <form action='./?action=magasin&subaction=deleteRetourFT' method='POST'>
                                 <input type="hidden" class="form-control retour_idrft" name="retour_id">
                                 <button class="btn btn-secondary btn-sm font-weight-bold"> <i class="fas fa-minus"></i> SUPPRIMER </button>
@@ -1437,7 +1437,7 @@
                 
                     <div class="card-header">
                         <h3 class="card-title">MAGASIN <i class="fas fa-arrow-left"></i> Point de Vente</h3>
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_RETOUR_ADD") ?>">
                             <button class="btn btn-dark btn-sm font-weight-bold" onclick="back('.sect_list_retour_pv','.sect_add_retour_pv')"> 
                                 <i class="fas fa-plus"></i> AJOUTER 
                             </button>
@@ -1625,7 +1625,7 @@
 
                         <span class="lead font-weight-bold center"> MAGASIN <i class="fas fa-arrow-right"></i> POINT DE VENTE</span>
 
-                        <div class="card-tools">
+                        <div class="card-tools <?= ShowIFPermit("BTL_MAG_RETOUR_SUP") ?>">
                             <form action='./?action=magasin&subaction=deleteRetourPV' method='POST'>
                                 <input type="hidden" class="form-control retour_idrpv" name="retour_id">
                                 <button class="btn btn-dark btn-sm font-weight-bold"> <i class="fas fa-minus"></i> SUPPRIMER </button>

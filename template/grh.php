@@ -108,7 +108,7 @@
             </div>
 
             <div class="card-body">
-                <div class="row p-2">
+                <div class="row p-2 <?= ShowIFPermit("BTL_GRH_ADD") ?>">
                     <button class="btn btn-sm btn-dark font-weight-bold" onclick="back('.sect_list_presence','.sect_add_presence')"> <i class="fas fa-plus"></i> NOUVEAU </button>
                 </div>
               <table class="table table-bordered tableordered table-stripper">
@@ -162,7 +162,7 @@
 
                 <h3 class="card-title"> Fiche de Présence </h3>
 
-                <div class="card-tools">
+                <div class="card-tools <?= ShowIFPermit("BTL_GRH_SUP") ?>">
                     <form action="./?action=grh&subaction=deleteFiche" method="post">
                         <input type="hidden" class="date_jour" name="date_jour">
                         <button type="submit" class="btn btn-sm btn-dark font-weight-bold"> <i class="fas fa-trash"></i> SUPPRIMER </button>

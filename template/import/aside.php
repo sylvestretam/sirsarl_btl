@@ -51,7 +51,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="?action=magasin" class="nav-link btn_nav_link <?= active_nav_link("magasin") ?>">
+          <a href="?action=magasin" class="nav-link btn_nav_link <?= active_nav_link("magasin") ?> <?= ShowIFPermit("BTL_MAG") ?>">
             <i class="nav-icon fas fa-university"></i>
             <p>
               MAGASIN
@@ -60,7 +60,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="?action=degustation" class="nav-link btn_nav_link <?= active_nav_link("degustation") ?>">
+          <a href="?action=degustation" class="nav-link btn_nav_link <?= active_nav_link("degustation") ?> <?= ShowIFPermit("BTL_DEGUSTATION") ?>">
             <i class="nav-icon fas fa-circle"></i>
             <p>
               DEGUSTATION
@@ -69,7 +69,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="?action=venteft" class="nav-link btn_nav_link <?= active_nav_link("venteft") ?>">
+          <a href="?action=venteft" class="nav-link btn_nav_link <?= active_nav_link("venteft") ?> <?= ShowIFPermit("BTL_VMD") ?>">
             <i class="nav-icon fas fa-circle"></i>
             <p>
               VENTE MD
@@ -78,7 +78,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="?action=ventepv" class="nav-link btn_nav_link <?= active_nav_link("ventepv") ?>">
+          <a href="?action=ventepv" class="nav-link btn_nav_link <?= active_nav_link("ventepv") ?> <?= ShowIFPermit("BTL_VPV") ?>">
             <i class="nav-icon fas fa-circle"></i>
             <p>
               POINT DE VENTE
@@ -87,7 +87,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="?action=grh" class="nav-link btn_nav_link <?= active_nav_link("grh") ?>">
+          <a href="?action=grh" class="nav-link btn_nav_link <?= active_nav_link("grh") ?> <?= ShowIFPermit("BTL_GRH") ?>">
             <i class="nav-icon fas fa-circle"></i>
             <p>
               GRH

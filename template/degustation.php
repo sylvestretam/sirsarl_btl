@@ -114,7 +114,7 @@
 
                         <div class="card-body">
 
-                            <div class="row <?= ShowIFPermit("BTL") ?>">
+                            <div class="row <?= ShowIFPermit("BTL_DEGUSTATION_ADD") ?>">
                                 <button type="button" class="btn btn-md btn-dark btn-flat font-weight-bold" onclick="back('.sect_list','.sect_add')">
                                 <i class="fas fa-plus"></i> AJOUTER
                                 </button>
@@ -327,7 +327,7 @@
                                     <div class="card card-secondary">
                                         <div class="card-header">
                                             <h3 class="card-title">DEGUSTATION</h3>
-                                            <div class="card-tools">
+                                            <div class="card-tools <?= ShowIFPermit("BTL_DEGUSTATION_SUP") ?>">
                                                 <form action='./?action=degustation&subaction=deleteDegustation' method='POST'>
                                                     <input type="hidden" class="form-control degustation_id" name="degustation_id">
                                                     <button class="btn btn-dark btn-sm font-weight-bold"> <i class="fas fa-minus"></i> SUPPRIMER </button>

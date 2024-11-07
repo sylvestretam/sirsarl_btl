@@ -110,7 +110,7 @@
 
             <div class="card-body">
 
-              <div class="row <?= ShowIFPermit("BTL") ?>">
+              <div class="row <?= ShowIFPermit("BTL_VPV_ADD") ?>">
                 <button type="button" class="btn btn-md btn-dark btn-flat font-weight-bold" onclick="back('.sect_list_vente','.sect_add')">
                   <i class="fas fa-plus"></i> AJOUTER
                 </button>
@@ -169,7 +169,7 @@
                 <i class="fas fa-arrow-left"></i> RETOUR
               </button>
 
-              <div class="card-tools <?= ShowIFPermit("KONTRITOK_VMD_SUP") ?>">
+              <div class="card-tools <?= ShowIFPermit("BTL_VPV_SUP") ?>">
                 <form action="./?action=ventepv&subaction=deleteVente" method="POST">
                   <input type="hidden" class="form-control vente_id" name="vente_id">
                   <button type="submit" class="btn btn-sm btn-dark font-weight-bold">
